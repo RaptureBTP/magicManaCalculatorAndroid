@@ -28,6 +28,22 @@ namespace magicManaCalculatorAndroid
 		{
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int decktypes_array = 2131034112;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -60,8 +76,29 @@ namespace magicManaCalculatorAndroid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MyButton = 2131034112;
+			// aapt resource value: 0x7f060001
+			public const int deckSizeLabel = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int deckSizeTextBox = 2131099650;
+			
+			// aapt resource value: 0x7f060007
+			public const int deckTypeSpinner = 2131099655;
+			
+			// aapt resource value: 0x7f060004
+			public const int landCheckBox = 2131099652;
+			
+			// aapt resource value: 0x7f060000
+			public const int linearLayout1 = 2131099648;
+			
+			// aapt resource value: 0x7f060005
+			public const int linearLayout2 = 2131099653;
+			
+			// aapt resource value: 0x7f060003
+			public const int linearLayout3 = 2131099651;
+			
+			// aapt resource value: 0x7f060006
+			public const int textView2 = 2131099654;
 			
 			static Id()
 			{
@@ -97,6 +134,9 @@ namespace magicManaCalculatorAndroid
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int decktype_prompt = 2130968578;
 			
 			static String()
 			{

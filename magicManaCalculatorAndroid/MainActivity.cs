@@ -8,10 +8,10 @@ using Android.OS;
 
 namespace magicManaCalculatorAndroid
 {
-    [Activity(Label = "magicManaCalculatorAndroid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Magic Mana Calculator", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
+        string deckType = "Standard";
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -20,11 +20,22 @@ namespace magicManaCalculatorAndroid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            Spinner spinner = FindViewById<Spinner>(Resource.Id.deckTypeSpinner);
+            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.decktypes_array, Android.Resource.Layout.SimpleSpinnerItem);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spinner.Adapter = adapter;
+        }
+
+        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+
+            deckType = spinner.GetItemAtPosition(e.Position).ToString();
+            string toast = string.Format("The decktype is {0}", deckType);
+            Toast.MakeText(this, toast, ToastLength.Long).Show();
         }
     }
 }

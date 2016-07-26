@@ -1,1 +1,1 @@
-<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">magicManaCalculatorAndroid</string></resources>
+<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">Magic Mana Calculator</string><string name="decktype_prompt">Deck Type:</string><string-array name="decktypes_array"><item>Standard</item><item>Rush</item><item>Ramp</item><item>Commander</item><item>Wizard\'s Tower</item></string-array></resources>
